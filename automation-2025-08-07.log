@@ -1,0 +1,5 @@
+2025-08-07T14:09:56,042 [Test worker] INFO  (ReqResTests.java:27) - Iniciando la configuración
+2025-08-07T14:11:32,357 [Test worker] INFO  (ReqResTests.java:27) - Iniciando la configuración
+2025-08-07T14:11:32,934 [Test worker] INFO  (ReqResTests.java:35) - Configuración exitosa
+2025-08-07T14:27:01,072 [Test worker] INFO  (ReqResTests.java:28) - Iniciando la configuración
+2025-08-07T14:27:01,623 [Test worker] INFO  (ReqResTests.java:36) - Configuración exitosa

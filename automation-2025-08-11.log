@@ -1,0 +1,12 @@
+2025-08-11T12:56:14,737 [Test worker] INFO  (ReqResTests.java:28) - Iniciando la configuración
+2025-08-11T12:56:15,323 [Test worker] INFO  (ReqResTests.java:36) - Configuración exitosa
+2025-08-11T13:57:33,274 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2025-08-11T13:57:33,750 [Test worker] INFO  (BaseTest.java:27) - Configuration exitosa.
+2025-08-11T13:57:58,838 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2025-08-11T13:57:59,283 [Test worker] INFO  (BaseTest.java:27) - Configuration exitosa.
+2025-08-11T14:06:18,741 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2025-08-11T14:06:19,305 [Test worker] INFO  (ApplicationProperties.java:23) - Property file to read application-dev.properties
+2025-08-11T14:06:19,306 [Test worker] INFO  (ApplicationProperties.java:23) - Property file to read application-dev.properties
+2025-08-11T14:06:19,372 [Test worker] INFO  (BaseTest.java:27) - Configuration exitosa.
+2025-08-11T14:07:28,111 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2025-08-11T14:07:28,640 [Test worker] INFO  (BaseTest.java:27) - Configuration exitosa.
