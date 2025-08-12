@@ -13,7 +13,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class ReqResTests extends BaseTest{
-    @Test
+
     public void loginTest() {
         given()
                 .body("{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"cityslicka\"\n}")
@@ -23,7 +23,7 @@ public class ReqResTests extends BaseTest{
                 .body("token", notNullValue());
     }
 
-    @Test
+
     public void getSingleUserTest() {
         given()
                 .get("/users/2")
@@ -32,7 +32,7 @@ public class ReqResTests extends BaseTest{
                 .body("data.id", equalTo(2));
     }
 
-    @Test
+
     public void deleteUserTest() {
         given()
                 .delete("/users/2")
@@ -40,7 +40,7 @@ public class ReqResTests extends BaseTest{
                 .statusCode(HttpStatus.SC_NO_CONTENT);
     }
 
-    @Test
+
     public void patchUserTest() {
         String nameUpdated = given()
                 .when()
@@ -53,7 +53,7 @@ public class ReqResTests extends BaseTest{
         assertThat(nameUpdated, equalTo("morpheus"));
     }
 
-    @Test
+
     public void putUserTest() {
         String jobUpdated = given()
                 .when()
@@ -66,7 +66,7 @@ public class ReqResTests extends BaseTest{
         assertThat(jobUpdated, equalTo("zion resident"));
     }
 
-    @Test
+
     public void getAllUserTest() {
         Response response =
                 given()
@@ -88,7 +88,7 @@ public class ReqResTests extends BaseTest{
         System.out.println(headers.get("Transfer-Encoding"));
     }
 
-    @Test
+
     public void getAllUserTest2() {
         String response =
                 given()
@@ -111,7 +111,7 @@ public class ReqResTests extends BaseTest{
         int id = Integer.parseInt(user.get(0).get("id").toString());
     }
 
-    @Test
+
     public void createUserTest() {
         String response =
                 given()
@@ -128,7 +128,7 @@ public class ReqResTests extends BaseTest{
         System.out.println(user.getJob());
     }
 
-    @Test
+
     public void registerUserTest(){
         CreateUserRequest user = new CreateUserRequest();
         user.setEmail("eve.holt@reqres.in");

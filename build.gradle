@@ -22,9 +22,7 @@ dependencies {
 test {
     useJUnitPlatform()
 
-    def env = System.getenv("ENV") ?: "dev"
-    println "Entorno actual: ${env}"
-
+    systemProperty "env", "dev"
     // AspectJ y Allure
     jvmArgs "-javaagent:${configurations.testRuntimeClasspath.find { it.name.contains('aspectjweaver') }}"
     systemProperty "allure.results.directory", layout.buildDirectory.dir("allure-results").get().asFile.absolutePath
