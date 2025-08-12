@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'io.qameta.allure' version '2.11.2'
+    id 'io.qameta.allure' version '2.12.0'
 }
 
 repositories {
@@ -10,22 +10,29 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    testImplementation 'io.qameta.allure:allure-junit5:2.29.1'
     testImplementation 'io.rest-assured:rest-assured:5.5.5'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.2'
     implementation 'org.apache.logging.log4j:log4j-api:2.12.4'
     implementation 'org.apache.logging.log4j:log4j-core:2.12.4'
-    implementation 'io.qameta.allure:allure-rest-assured:2.29.1'
     testRuntimeOnly 'org.aspectj:aspectjweaver:1.9.21'
+    implementation 'io.qameta.allure:allure-rest-assured:2.29.1'
+    testImplementation 'io.qameta.allure:allure-junit5:2.29.1'
 }
 
 test {
     useJUnitPlatform()
-
     systemProperty "env", "dev"
-    // AspectJ y Allure
     jvmArgs "-javaagent:${configurations.testRuntimeClasspath.find { it.name.contains('aspectjweaver') }}"
     systemProperty "allure.results.directory", layout.buildDirectory.dir("allure-results").get().asFile.absolutePath
 }
 
+// Configuración de Allure
+allure {
+    version.set("2.34.1") // usa la misma versión que tienes instalada en CLI
+    report {
+        dependsOnTests.set(true) // ejecuta tests antes de generar el reporte
+    }
+}
 
+// Ejecuta tests y luego genera el reporte
+test.finalizedBy('allureServe')

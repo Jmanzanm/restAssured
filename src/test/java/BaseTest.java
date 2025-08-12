@@ -48,6 +48,7 @@ public abstract class BaseTest {
         return new RequestSpecBuilder().setBaseUri("https://prod.reqres.in")
                 .setBasePath("/api")
                 .setContentType(ContentType.JSON)
+                .addHeader("x-api-key","reqres-free-v1")
                 .build();
     }
 
