@@ -35,4 +35,5 @@ allure {
 }
 
 // Ejecuta tests y luego genera el reporte
-test.finalizedBy('allureReport')
+//test.finalizedBy('allureReport')
+//test.finalizedBy('allureServe')
