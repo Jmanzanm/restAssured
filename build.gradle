@@ -27,12 +27,12 @@ test {
 }
 
 // Configuración de Allure
-allure {
-    version.set("2.34.1") // usa la misma versión que tienes instalada en CLI
-    report {
-        dependsOnTests.set(true) // ejecuta tests antes de generar el reporte
-    }
-}
+//allure {
+//    version.set("2.34.1") // usa la misma versión que tienes instalada en CLI
+//    report {
+//        dependsOnTests.set(true) // ejecuta tests antes de generar el reporte
+//    }
+//}
 
 // Ejecuta tests y luego genera el reporte
 //test.finalizedBy('allureReport')
