@@ -25,15 +25,3 @@ test {
     jvmArgs "-javaagent:${configurations.testRuntimeClasspath.find { it.name.contains('aspectjweaver') }}"
     systemProperty "allure.results.directory", layout.buildDirectory.dir("allure-results").get().asFile.absolutePath
 }
-
-// Configuración de Allure
-allure {
-    version.set("2.34.1") // usa la misma versión que tienes instalada en CLI
-    report {
-        dependsOnTests.set(true) // ejecuta tests antes de generar el reporte
-    }
-}
-
-// Ejecuta tests y luego genera el reporte
-test.finalizedBy('allureReport')
-//test.finalizedBy('allureServe')
