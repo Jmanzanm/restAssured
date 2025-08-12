@@ -105,10 +105,10 @@ public class ReqResTests extends BaseTest{
         System.out.println("id first user: " + idFirstUser);
 
         List<Map> userWithIdGreaterThan10 = from(response).get("data.findAll {user -> user.id > 10}");
-        String email = userWithIdGreaterThan10.getFirst().get("email").toString();
+        String email = userWithIdGreaterThan10.get(0).get("email").toString();
 
         List<Map> user = from(response).get("data.findAll {user -> user.id > 10 && user.last_name =='Howell'}");
-        int id = Integer.parseInt(user.getFirst().get("id").toString());
+        int id = Integer.parseInt(user.get(0).get("id").toString());
     }
 
     @Test

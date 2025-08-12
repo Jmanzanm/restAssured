@@ -185,3 +185,9 @@
 2025-08-12T11:48:47,838 [Test worker] INFO  (BaseTest.java:28) - Configuration exitosa.
 2025-08-12T11:48:52,530 [Test worker] INFO  (BaseTest.java:26) - Iniciando la configuracion
 2025-08-12T11:48:52,533 [Test worker] INFO  (BaseTest.java:28) - Configuration exitosa.
+2025-08-12T12:20:53,718 [Test worker] INFO  (BaseTest.java:26) - Iniciando la configuracion
+2025-08-12T12:20:54,494 [Test worker] INFO  (ApplicationProperties.java:34) - Property file to read application-dev.properties
+2025-08-12T12:20:54,611 [Test worker] INFO  (BaseTest.java:28) - Configuration exitosa.
+2025-08-12T12:21:13,914 [Test worker] INFO  (BaseTest.java:26) - Iniciando la configuracion
+2025-08-12T12:21:14,612 [Test worker] INFO  (ApplicationProperties.java:34) - Property file to read application-dev.properties
+2025-08-12T12:21:14,702 [Test worker] INFO  (BaseTest.java:28) - Configuration exitosa.
